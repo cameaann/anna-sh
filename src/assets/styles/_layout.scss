@@ -1,0 +1,245 @@
+@import './variables';
+@import './mixins';
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+     // 1rem = 10px    10px/16px=62.5% width 1200-1800px
+     font-size: 62.5%;
+
+     @include response(tab-land){ //width<1200px
+         font-size: 56.25%; //1rem=9px 9px/16px=56.25%
+     }
+     @include response(tab-port){ //width<900px
+         font-size: 50%; //1rem=8px 8px/16px=50%
+     }
+     @include response(phone){
+         font-size: 44%; //1rem=7px 7px/16px=44%
+     }
+     @include response(big-desktop){ //width> 1800px
+         font-size: 75%; //1rem=12px 12/16=75%
+     }
+
+}
+
+.container{
+    display: grid;  
+    width:120rem;
+    margin:5rem auto;
+}
+
+.header{
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(12, 10rem);
+    grid-template-rows: 5rem 5rem 7rem;
+
+    @include response(tab-land){
+        grid-template-rows: 4rem 4rem 5rem;
+        margin-bottom: 5rem;
+    }
+    @include response(phone-mini){
+        grid-template-rows: 6rem 6rem 6rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.primary-heading{ 
+    font-family: 'Open Sans', 'Arial', 'sans-serif';
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $font-color;
+
+    &_name{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    &_lastname{
+        grid-column: 3/5;
+        grid-row: 2/3;
+    }
+
+    @include response(tab-land){
+        font-size: 3.6rem;        
+    }
+    @include response(phone-mini){
+        font-size: 4rem;        
+    }
+}
+
+.secondary-heading{
+    font-family: 'Roboto';
+    font-size: 3.6rem;
+    font-style: italic;
+    color: $font-color;
+    
+    &_prof{
+        grid-column: 5/8;
+        grid-row: 3/4;
+    }
+
+    &_write{
+        grid-column: 9/11;
+        grid-row: 1;
+        align-self: end;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover{
+            color: $font-color-dark;
+        }
+    }
+
+    &_works{
+        grid-column: 2/4;
+        grid-row: 2;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        align-self: center;
+
+        &:hover{
+            color: $font-color-dark;
+        }
+
+        @include response(phone-mini){
+            grid-column: 9/12;
+            grid-row: 4;      
+        }
+    }
+    @include response(tab-land){
+        font-size: 2.4rem;        
+    }
+    @include response(phone-mini){
+        font-size: 3.6rem;        
+    }
+}
+.content{
+    font-size: 1.6rem;
+    font-family: 'Roboto', 'sans-serif';
+    display: grid;
+    grid-template-columns: repeat(12, 10rem);
+    grid-template-rows: 20rem 20rem 20rem 15rem;
+
+    @include response(tab-land){
+        font-size: 1.4rem;
+        grid-template-rows: 15rem 15rem 15rem 15rem;
+    }
+    @include response(tab-port){
+        grid-template-rows: repeat(8, 15rem)       
+    }
+    @include response(phone-mini){
+        font-size: 2.5rem;        
+    }
+}
+
+.education{
+    position: relative;
+    grid-row: 1;
+    grid-column: 9/12;
+    align-self: center;
+
+    &::before{
+        content:'education';
+        @include shadow-title;
+        right: 27rem;
+        top: -2rem;
+
+        @include response(tab-land){
+            right: 38rem;
+            top: -2rem;
+        }
+        @include response(tab-port){
+            left: 1rem;
+            top: 1rem;
+        }
+        @include response(phone-mini){
+            grid-row: 1;
+        }
+    }  
+
+    @include response(tab-land){
+        grid-column: 8/12;
+    }
+    @include response(tab-port){
+        grid-column: 2/12;
+        grid-row: 1;
+    }
+    @include response(phone-mini){
+        grid-row: 2;
+    }
+}
+
+
+.skills{
+    grid-row: 2;
+    grid-column: 6;
+    align-self: center;
+    &::before{
+        content:'skills';
+        @include shadow-title;
+        left:75rem;
+        top: 42rem;
+
+        @include response(tab-land){
+            left: 65rem;
+            top: 38rem;
+        }
+        @include response(tab-port){
+            left: 1rem;
+            top: 5rem;
+        }
+        @include response(phone-mini){
+            grid-row: 3;
+            
+        }
+    } 
+    @include response(tab-port){
+        grid-column: 2/12;
+        grid-row: 2;
+    }
+    @include response(phone-mini){
+        grid-row: 4;
+    }
+}
+.courses{
+    grid-row: 3;
+    grid-column: 2/6;
+    list-style: none;
+    align-self: center;
+    
+    &::before{
+        content:'courses';
+        @include shadow-title;
+        left:51rem;
+        top:62rem;
+        
+        @include response(tab-land){
+            left: 35rem;
+            top: 53rem;
+        }
+        @include response(tab-port){
+            left: 1rem;
+            top: 10rem;
+        }
+        @include response(phone-mini){
+            grid-row: 5;
+        }
+    } 
+    @include response(tab-port){
+        grid-column:  2/12;;
+        grid-row: 3;
+    }
+    @include response(phone-mini){
+        grid-row: 6;
+    }
+}
