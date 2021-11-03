@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "description": "YOUR TOUR",
+        "iconUrl": "assets/img/thumbnail_your-tour.jpg",
+        "src": "https://cameaann.github.io/your-tour/",
+        "longDescription": "This Landing Page converts visitors into signups. Create landing page with email capture."
+    },
+    {
+        "id": 2,
+        "description": "HOTEL PAGE",
+        "iconUrl": "assets/img/thumbnail_hotel-page.jpg",
+        "src": "https://cameaann.github.io/app-rest/",
+        "longDescription": "Design a simple onboarding flow: in-app screens/ user dashboard/ profile. Final design should include personas, use cases: sketches, wireframes, final prototype beautifully mocked up"
+    },
+    {
+        "id": 3,
+        "description": "USER SYSTEM",
+        "iconUrl": "assets/img/thumbnail_users.png",
+        "src": "https://cameaann.github.io/userApp/",
+        "longDescription": "Here is the part of user management system. "
+    },
+    {
+        "id": 4,
+        "description": "BLOG",
+        "iconUrl": "assets/img/thumbnail_blog.png",
+        "src": "https://kids-stories-blog.web.app/",
+        "longDescription": "Here should be homepage, author's page, the form for creating and editing stories."
+    }
+]

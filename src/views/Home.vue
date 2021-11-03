@@ -1,17 +1,24 @@
 <template>
-  <div class="home">    
-    <About/>
-  </div>
+  <transition> 
+    <div class="home">
+      <About/>
+    </div>
+  </transition>
 </template>
 
 <script>
 // @ is an alias to /src
-import About from '@/components/About.vue'
+import About from "@/components/About.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
+  data(){
+    return {
+      view: About
+    }
+  },
   components: {
-    About
-  }
-}
+    About,
+  },
+};
 </script>

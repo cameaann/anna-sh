@@ -1,23 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import WriteMe from '../views/WriteMe.vue'
 import Projects from '../views/Projects'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
-  },
-  {
-    path: '/write',
-    name: 'WriteMe',
-    component: WriteMe
+    component: Home,
+    meta:{
+      enterClass:"animate__animated animate__fadeInLeft",
+      leaveClass:"animate__animated animate__fadeOutRight"
+    }
   },
   {
     path: '/projects',
     name: 'Projects',
-    component: Projects
+    component: Projects,
+    meta:{
+      enterClass:"animate__animated animate__fadeInRight",
+      leaveClass:"animate__animated animate__fadeOutLeft"
+    }
   },
   {
     path: '/about',

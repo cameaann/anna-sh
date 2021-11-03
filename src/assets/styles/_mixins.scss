@@ -48,4 +48,17 @@
     @include response(tab-port){
         font-size: 8rem;
     }
+    @include response(phone){
+        font-size: 6rem;
+    }
+    @include response(big-desktop){
+        font-size: 20rem;
+    }
+}
+
+@mixin central{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
