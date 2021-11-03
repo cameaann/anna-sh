@@ -20,6 +20,6 @@ cd dist
 git push -f git@github.com:<cameaann>/<anna-sh>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:<cameaann>/<anna-sh>.git main:gh-pages
+git push -f https://github.com/cameaann/anna-sh.git main:gh-pages
 
 cd -
