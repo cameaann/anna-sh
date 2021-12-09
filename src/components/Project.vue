@@ -1,7 +1,7 @@
 <template>
   <div class="project">
     <a v-bind:href="project.src" target="blank">
-      <div v-bind:class="'project__card-'+ project.id" class="project__card" v-if="project">
+      <div  class="project__card" v-bind:style="{ backgroundImage: getStyle +','+'url('+getUrl(project.iconUrl)+')'}" v-if="project">
         <div class="u-center-text u-middle">
           <div class="project__title">{{ project.description }}</div>
         </div>
@@ -13,6 +13,19 @@
 
 export default({
   props: ['project', 'index'],
+  computed:{
+    getStyle(){
+      const overlay = 'linear-gradient(to right bottom, rgba(231, 224, 224, .5), rgba(104, 98, 98, .5))';
+      return  overlay;
+    }
+  },
+  methods:{
+    getUrl(val){
+           return require('../assets/'+ val);
+    }
+  }
 })
 </script>
+
+
 

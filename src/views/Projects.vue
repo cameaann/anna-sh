@@ -1,5 +1,5 @@
 <template>
-  <transition>
+  <transition  mode="out-in">
     <div class="container-wrap">
       <Navigation />
       <h1 class="primary-heading page-title">My works</h1>

@@ -1,7 +1,8 @@
 <template>
-  <transition> 
+  <transition  mode="out-in">
     <div class="home">
       <About/>
+      <!-- <div class="test">Привет</div> -->
     </div>
   </transition>
 </template>
