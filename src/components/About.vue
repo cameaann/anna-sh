@@ -1,5 +1,4 @@
 <template>
-  <transition>
     <div class="container-wrap">
       <div class="header">
         <span class="primary-heading primary-heading_name">Anna</span>
@@ -62,8 +61,11 @@
         </ul>
       </div>
     </div>
-  </transition>
 </template>
+
+<style scoped>
+
+</style>
 
 <script>
 export default {

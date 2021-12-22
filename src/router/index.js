@@ -10,6 +10,7 @@ const routes = [
     meta:{
       enterClass:"animate__animated animate__fadeInLeft",
       leaveClass:"animate__animated animate__fadeOutRight"
+
     }
   },
   {

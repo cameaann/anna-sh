@@ -1,11 +1,72 @@
-  // .slide-fade-enter-active {
-  //   transition: all .3s ease;
-  // }
-  // .slide-fade-leave-active {
-  //   transition: 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-  // }
-  // .slide-fade-enter, .slide-fade-leave-to
-  // /* .slide-fade-leave-active до версии 2.1.8 */ {
-  //   transform: translateX(900px);
-  //   opacity: 1;
-  // }
+  @keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(25px);
+     }
+     100% {
+        opacity: 1;
+        transform: translateX(0);
+     }
+}
+
+@keyframes fadeOutRight {
+    0% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+    100% {
+       opacity: 0;
+       transform: translateX(25px);
+    }
+ }
+
+ @keyframes fadeOutLeft {
+    0% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+    100% {
+       opacity: 0;
+       transform: translateX(-25px);
+    }
+ }
+
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-25px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+
+.animate_fadeInRight{
+  animation-name: fadeInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: inherit;
+}
+
+.animate_fadeOutLeft{
+  animation-name: fadeOutLeft;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode: inherit;
+}
+
+.animate__fadeInLeft{
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode: inherit;
+}
+
+.animate__fadeOutRight{
+  animation-name: fadeOutRight;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode: inherit;
+}
