@@ -5,7 +5,7 @@
         <span class="primary-heading primary-heading_name">Anna</span>
         <span class="primary-heading primary-heading_lastname">Shestakova</span>
         <span class="secondary-heading secondary-heading_prof">
-          UX/UI Designer</span
+          Web Designer</span
         >
         <div class="nav">
           <div
