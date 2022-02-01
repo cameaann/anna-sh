@@ -33,6 +33,14 @@
         "iconUrl": "img/thumbnail_library.png",
         "src": "https://cameaann.github.io/library/",
         "longDescription": "Here is library website."
+    },
+    {
+        "id": 6,
+        "description": "MEDPRO",
+        "iconUrl": "img/thumbnail_med.svg",
+        "src": "https://cameaann.github.io/medPro/",
+        "longDescription": "Here is MedPro landing page."
     }
+
 
 ]
