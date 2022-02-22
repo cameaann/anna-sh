@@ -30,361 +30,123 @@ html{
 
 body{
     font-family: 'Open Sans', 'Roboto', 'sans serif';
-    
+    // font-size: 10px;
+}
+
+
+.home-container{
+    width:120rem;
+    margin: 0 auto;
+    padding: 4rem;
+
+    @include response(phone){
+        width:90%;
+        padding: 2rem;
+        margin: 2rem auto 10rem auto;
+    }
+}
+
+.hello{
+    font-size: $default-font-size*2;
+    margin: 5rem;
+    color: $text-color;
+    text-align: center;
+
+    @include response(phone){
+        margin: 3rem auto;
+        font-size: $default-font-size*1.2;
+    }
 }
 
 .container-wrap{
+    display: flex;
+    width:120rem;
     position: relative;
-    width:100%;
-    // margin:5rem;
+    margin: 5rem auto;
+    padding: 4rem;
+    font-size: 1.6rem;
+    justify-content: space-evenly;
 
     @include response(phone){
-        margin:0rem;
-    }
-}
-
-.header{
-    font-size: 1.4rem;
-    padding-top: 2rem;
-    display: grid;
-    margin-bottom: 4rem;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 5rem 5rem 3rem;
-
-    @include response(tab-land){
-        grid-template-rows: 4rem 4rem 3rem;
-        margin-bottom: 2rem;
-    }
-    @include response(tab-port){
-        grid-template-rows: 2rem 3rem 3rem;
-        // margin: 5rem 0;
-    }
-    @include response(phone){
-        display: flex;
+        width:90%;
         flex-direction: column;
-        align-items: center;
-    }
-    @include response(big-desktop){
-        grid-template-rows: 7rem 7rem 4rem;
-        // grid-template-columns: repeat(12, 18rem);
-        grid-template-columns: repeat(12, 1fr);
+        padding: 2rem;
+        margin: 2rem auto 10rem auto;
     }
 }
 
-.nav{
+.column1{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    // justify-content: center;
+    align-items: center;
 
     @include response(phone){
-        display: flex;
-        width:32rem;
-        margin-top:3rem;
-        justify-content: space-between;
+        width:100%;
     }
 
 }
+.column2{
+    display: flex;
+    flex-direction: column;
+    width:30%;
 
-.primary-heading{
-    font-family: 'Open Sans', 'Arial', 'sans-serif';
-    font-size: 4.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $font-color;
-
-    &_name{
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
-    &_lastname{
-        grid-column: 3/5;
-        grid-row: 2/3;
-    }
-
-    @include response(tab-land){
-        font-size: 3.6rem;
-    }
-    @include response(tab-port){
-        font-size: 3rem;
-    }
     @include response(phone){
-        font-size: 4rem;
+        width:90%;
+        padding: 2rem;
     }
-    @include response(big-desktop){
+
+
+    .name{
         font-size: 6.4rem;
-    }
-}
-
-.secondary-heading{
-    font-family: 'Roboto';
-    font-size: 3.6rem;
-    font-style: italic;
-    color: $font-color;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &_prof{
-        grid-column: 5/8;
-        grid-row: 3/4;
-    }
-
-    &_write{
-        position: absolute;
-        right: 20rem;
-        top: 5rem;
-        cursor: pointer;
-        z-index: 1000;
-
-        &:hover{
-            color: $font-color-dark;
-        }
-
-        @include response(big-desktop){
-
-        }
-
-        @include response(tab-port){
-            right:10rem;
-        }
+        color: $accent-color;
+        font-family: "Impact", "Open Sans";
+        text-transform: uppercase;
+        margin-bottom: 3rem;
 
         @include response(phone){
-            top:0;
-            left:0;
-            position: relative;
-        }
-    }
-
-    &_works{
-        position: absolute;
-        top: 41rem;
-        left: 20rem;
-        cursor: pointer;
-        z-index: 1000;
-
-        &:hover{
-            color: $font-color-dark;
-        }
-
-        @include response(big-desktop){
-            left: 26rem;
-            top: 46rem;
-        }
-
-        @include response(tab-land){
-            top: 35rem;
-            left: 20rem;
-        }
-
-        @include response(tab-port){
-            top: 40rem;
-            left: 4rem;
-            color:#ffffff;
-            z-index: 200;
-
-            &::before{
-                content: '';
-                position: absolute;
-                display: block;
-                width:15rem;
-                height:15rem;
-                background-color: $font-color;
-                border-radius:50%;
-                top:-6rem;
-                left:-2rem;
-                z-index: -2;
-            }
-        }
-
-        @include response(phone){
-            top:0;
-            left:0;
-            position: relative;
-            color: $font-color;
-
-            &::before{
-                display: none;
-            }
+            font-size: 5.6rem;
         }
 
     }
-    @include response(tab-land){
-        font-size: 2.4rem;
+    .prof{
+        font-size: 2.8rem;
+        color: $font-color-dark;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 5rem;
     }
-    @include response(phone){
-        font-size: 1.8rem;
-    }
-}
-
-.page-title{
-    text-align: center;
-    margin:5rem;
-}
-
-.content{
-    position: relative;
-    font-size: 1.4rem;
-    color: $text-color;
-    font-family: 'Roboto', 'sans-serif';
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 15rem 15rem 15rem;
-    row-gap: 2rem;
-
-    @include response(tab-land){
-        grid-template-rows: 14rem 14rem 14rem;
-        font-size: 1.6rem;
-        gap: 1rem;
-    }
-
-    @include response(tab-port){
-        grid-template-rows: 18rem 18rem 18rem;
-        font-size: 1.6rem;
-        gap: 1rem;
-    }
-    @include response(phone){
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 5rem;
-        row-gap: 3rem;
+    .content{
         font-size: 2rem;
-    }
-    @include response(big-desktop){
-        grid-template-columns: repeat(12, 1fr);
-        row-gap: 3rem;
-        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $font-color-dark;
+        margin-bottom: 5rem;
     }
 }
 
-.education{
-    position: relative;
-    grid-row: 1;
-    grid-column: 9/12;
-    align-self: center;
+.photo{
+width: 100%;
+margin-bottom: 5rem;
+}
 
-    &::before{
-        content:'education';
-        @include shadow-title;
-        right: 27rem;
-        top: -4rem;
+.btn{
+    width: fit-content;
 
-        @include response(tab-land){
-            right: 24rem;
-            top: 0rem;
-        }
-        @include response(tab-port){
-            left: -39rem;
-            top: 1rem;
-        }
-        @include response(phone){
-          display: none;
-        }
-        @include response(big-desktop){
-            right: 22rem;
-            top: -4rem;
-        }
-    }
+    &-download{
+        padding: 2rem 4rem;
+        border: 3px solid $accent-color;
+        color: $accent-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: .5s ease all;
 
-    @include response(tab-land){
-        // grid-column: 8/12;
-    }
-    @include response(tab-port){
-        grid-column: 7/12;
-        grid-row: 1;
-    }
-    @include response(phone){
-        align-self: flex-start;
+        &:hover{
+            box-shadow: inset 16em 4em 0 0  $accent-color;
+            color: #ffffff;
+            font-weight: bold;
+            transition: .5s ease all;
+        }
     }
 }
 
-.skills{
-    position: relative;
-    grid-row: 2;
-    grid-column: 6;
-    align-self: center;
-
-    &::before{
-        content:'skills';
-        @include shadow-title;
-        left:16rem;
-        top: -7rem;
-
-        @include response(tab-land){
-            left: 15rem;
-            top: -4rem;
-        }
-        @include response(tab-port){
-            left: 19rem;
-            top: -1rem;
-        }
-        @include response(phone){
-            display: none;
-        }
-        @include response(big-desktop){
-            left: 17rem;
-            top: -8rem;
-        }
-    }
-    @include response(tab-port){
-        grid-column: 4/12;
-        grid-row: 2;
-    }
-    @include response(phone){
-        align-self: flex-start;
-    }
-}
-.courses{
-    position: relative;
-    grid-row: 3;
-    grid-column: 2/6;
-    list-style: none;
-    align-self: center;
-
-    a{
-        color:$text-color;
-    }
-
-    &::before{
-        content:'courses';
-        @include shadow-title;
-        left:26rem;
-        top:-2rem;
-
-        @include response(tab-land){
-            left: 25rem;
-            top: 2rem;
-        }
-        @include response(tab-port){
-            left: -35rem;
-            top: 4rem;
-        }
-        @include response(phone){
-            display: none;
-        }
-        @include response(big-desktop){
-            left: 27rem;
-            top: -2rem;
-        }
-    }
-    @include response(tab-port){
-        grid-column:  7/12;
-        grid-row: 3;
-    }
-    @include response(phone){
-        align-self: flex-start;
-    }
-}
-
-.title{
-    display: none;
-
-    @include response(phone){
-        display: block;
-        @include shadow-title;
-        position: relative;
-    }
-}
-
-.test{
-    display: block;
-    width:100%;
-    height:30rem;
-    background-color: lawngreen;
-}

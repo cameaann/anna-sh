@@ -1,42 +1,28 @@
 [
     {
         "id": "1",
-        "description": "YOUR TOUR",
+        "description": "Your Tour",
         "iconUrl": "img/thumbnail_your-tour.jpg",
         "src": "https://cameaann.github.io/your-tour/",
         "longDescription": "This Landing Page converts visitors into signups. Create landing page with email capture."
     },
     {
         "id": 2,
-        "description": "HOTEL PAGE",
+        "description": "Hotel Page",
         "iconUrl": "img/thumbnail_hotel-page.jpg",
         "src": "https://cameaann.github.io/app-rest/",
         "longDescription": "Design a simple onboarding flow: in-app screens/ user dashboard/ profile. Final design should include personas, use cases: sketches, wireframes, final prototype beautifully mocked up"
     },
     {
         "id": 3,
-        "description": "USER SYSTEM",
-        "iconUrl": "img/thumbnail_users.png",
-        "src": "https://cameaann.github.io/userApp/",
-        "longDescription": "Here is the part of user management system. "
-    },
-    {
-        "id": 4,
-        "description": "BLOG",
-        "iconUrl": "img/thumbnail_blog.png",
-        "src": "https://kids-stories-blog.web.app/",
-        "longDescription": "Here is homepage, author's page, the form for creating and editing stories."
-    },
-    {
-        "id": 5,
-        "description": "LIBRARY",
+        "description": "Library",
         "iconUrl": "img/thumbnail_library.png",
         "src": "https://cameaann.github.io/library/",
         "longDescription": "Here is library website."
     },
     {
-        "id": 6,
-        "description": "MEDPRO",
+        "id": 4,
+        "description": "Medpro",
         "iconUrl": "img/thumbnail_med.svg",
         "src": "https://cameaann.github.io/medPro/",
         "longDescription": "Here is MedPro landing page."

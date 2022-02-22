@@ -11,18 +11,16 @@
     grid-gap: $horizontal-gutter;
 
     @include response(tab-port){
-        max-width: $row-width/1.5;
         grid-template-columns: auto auto;
         grid-gap: $horizontal-gutter/2;
         padding: 0 5rem;
-
     }
 
     @include response(phone){
-        // max-width: $row-width/4;
         grid-template-columns: auto;
         grid-gap: $horizontal-gutter/2;
-        // padding: 0 5rem;
+        margin: 0rem auto;
+        padding: 0;
     }
 }
 
@@ -30,29 +28,20 @@
 .project{
 
     &__title{
-        font-size: 2.5rem;
-        position: absolute;
-        color: #ffffff;
-        vertical-align: middle;
-        @include central;
+        display: none;
     }
 
     &__card{
         position: relative;
         margin:0.5rem;
-        padding:1rem;
         font-size: $default-font-size;
-        background-color:$grey-color;
         background-size: cover;
-        // background-image:  linear-gradient(to right bottom,
-        // rgba($grey-color-light, 0.8),
-        // rgba($grey-color, 0.8));
         height:30rem;
         border-radius: .5rem;
         -webkit-box-shadow: -3px 7px 5px -5px rgba(34, 60, 80, 0.6);
         -moz-box-shadow: -3px 7px 5px -5px rgba(34, 60, 80, 0.6);
         box-shadow: -3px 7px 5px -5px rgba(34, 60, 80, 0.6);
-
+        transition: .5 all ease;
 
         &:hover{
             transform: scale(1.13rem);
@@ -60,40 +49,31 @@
             box-shadow: 0 .4rem 1.8rem .3rem rgba(173,159,173,1);
             transition: transform 1s, box-shadow 1s;
             cursor:pointer;
-        }
-
-        // &-1 {
-        //     background-size: cover;
-        //     background-image:
-        //     linear-gradient(to right bottom,
-        //     rgba($grey-color-light, 0.5),
-        //     rgba($grey-color, 0.5)),
-        //     url('../img/thumbnail_your-tour.jpg');
-        //      }
-        // &-2 {
-        //     background-size: cover;
-        //     background-image:  linear-gradient(to right bottom,
-        //     rgba($grey-color-light, 0.8),
-        //     rgba($grey-color, 0.8)),
-        //     url('../img/thumbnail_hotel-page.jpg');
-        //     }
-        //  &-3 {
-        //     background-size: cover;
-        //     background-image:  linear-gradient(to right bottom,
-        //     rgba($grey-color-light, 0.8),
-        //     rgba($grey-color, 0.8)),
-        //     url('../img/thumbnail_users.png');
-        //     }
-        //  &-4 {
-        //         background-size: cover;
-        //         background-image:  linear-gradient(to right bottom,
-        //         rgba($grey-color-light, 0.8),
-        //         rgba($grey-color, 0.8)),
-        //         url('../img/thumbnail_blog.png');
-        //         }
+            background-image: none;
+            }
         }
      }
+
     a {
         text-decoration: none;
         color:$font-color;
+    }
+
+    .project__card:hover > .hoverEff{
+        background: $accent-color;
+        background:  rgba(82, 142, 134, .9) 90%;
+        border-radius: .5rem;
+        height: 100%;
+        width: 100%;
+        transition: .5s ease all;
+    }
+
+    .project__card:hover > .hoverEff div >.project__title{
+        display: block;
+        font-size: 4rem;
+        position: absolute;
+        color: #ffffff;
+        @include central;
+        transition: .5s ease all;
+        z-index: 1000;
     }

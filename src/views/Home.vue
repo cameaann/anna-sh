@@ -1,8 +1,11 @@
 <template>
   <transition  mode="out-in">
-    <div class="home">
-      <About/>
-      <!-- <div class="test">Привет</div> -->
+    <div class="home-container">
+        <div class="hello">Hello! I'm Anna Shestakova. I make responsive sites, landings and prototypes.</div>
+        <Projects/>
+         <div class="letter">
+            <i @click="mailTo" class="icon-email-outline" alt="write me"></i>
+          </div>
     </div>
   </transition>
 </template>
@@ -11,17 +14,12 @@
 
 <script>
 // @ is an alias to /src
-import About from "@/components/About.vue";
+import Projects from "@/components/Projects.vue"
 
 export default {
   name: "Home",
-  data(){
-    return {
-      view: About
-    }
-  },
   components: {
-    About,
+    Projects
   },
 };
 </script>

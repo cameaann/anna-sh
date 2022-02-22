@@ -70,3 +70,19 @@
   animation-timing-function:ease-in-out;
   animation-fill-mode: inherit;
 }
+
+.mobile-nav-enter-active,
+.mobile-nav-leave-active{
+   transition: 1s ease all;
+}
+
+.mobile-nav-enter-from,
+.mobile-nav-leave-to{
+    transform: translateX(-250px);
+}
+
+.mobile-nav-enter-to,
+.mobile-nav-leave-from{
+    transform: translateX(0);
+}
+
