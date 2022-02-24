@@ -26,8 +26,8 @@ I like to sketch and try to find joy in running.</div>
 <script>
 export default {
   methods:{
-    download(){
-
+    mailTo(){
+        window.open("mailto:cameaann@gmail.com?subject=subject&body=body");
     }
   }
 };

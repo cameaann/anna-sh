@@ -115,6 +115,43 @@
      font-display: swap;
  }
 
+
+ @font-face {
+  font-family: 'Impact';
+  src: url('../css/fonts/Impact/Impact.eot');
+  src: url('../css/fonts/Impact/Impact.eot?') format('embedded-opentype'),
+      url('../css/fonts/Impact/Impact.woff2') format('woff2'),
+      url('../css/fonts/Impact/Impact.woff') format('woff'),
+      url('../css/fonts/Impact/Impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Impacted';
+  src: url('../css/fonts/Impact/Impacted.eot');
+  src: url('../css/fonts/Impact/Impacted.eot') format('embedded-opentype'),
+      url('../css/fonts/Impact/Impacted.woff2') format('woff2'),
+      url('../css/fonts/Impact/Impacted.woff') format('woff'),
+      url('../css/fonts/Impact/Impacted.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Impact';
+  src: url('../css/fonts/Impact/Impact_1.eot');
+  src: url('../css/fonts/Impact/Impact_1.eot') format('embedded-opentype'),
+      url('../css/fonts/Impact/Impact_1.woff2') format('woff2'),
+      url('../css/fonts/Impact/Impact_1.woff') format('woff'),
+      url('../css/fonts/Impact/Impact_1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?mlbx8b');

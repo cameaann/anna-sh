@@ -21,5 +21,10 @@ export default {
   components: {
     Projects
   },
+  methods:{
+    mailTo(){
+        window.open("mailto:cameaann@gmail.com?subject=subject&body=body");
+    }
+  }
 };
 </script>
