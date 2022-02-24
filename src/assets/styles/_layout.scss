@@ -103,7 +103,7 @@ body{
         color: $accent-color;
         font-family: "Impact", "Open Sans";
         // text-transform: uppercase;
-        
+
         margin-bottom: 3rem;
 
         @include response(phone){
@@ -147,6 +147,10 @@ margin-bottom: 5rem;
             color: #ffffff;
             font-weight: bold;
             transition: .5s ease all;
+
+            @include response(phone){
+                background-color: $accent-color;
+            }
         }
     }
 }
