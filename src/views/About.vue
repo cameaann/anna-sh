@@ -10,7 +10,7 @@
           <div class="prof">Web Designer</div>
           <div class="content">I’m interested in graphic design, illustration. Study the UX/UI design.
 I like to sketch and try to find joy in running.</div>
- <a href="https://drive.google.com/file/d/1oUZ9ue_zUCRX9IkRyBLnM7yElFQfaYLo/view?usp=sharing" class="btn btn-download" target="blank">Download resume</a>
+ <a href="https://drive.google.com/file/d/1xImk4RnQhyP-AT8OJsBYa2M2Yqk26m7d/view?usp=sharing" class="btn btn-download" target="blank">Download resume</a>
           <div class="letter">
             <i @click="mailTo" class="icon-email-outline" alt="write me"></i>
           </div>
