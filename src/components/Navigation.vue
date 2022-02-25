@@ -4,8 +4,8 @@
       <img src="../assets/img/logo.svg" alt="logo" @click="navigate">
     </div>
     <div v-show="!mobile" class="navigation">
-      <router-link class="link" to="/">Portfolio</router-link>
-      <router-link class="link" to="/about">About me</router-link>
+      <router-link :class="{ active: isActive('/') }" class="link" to="/">Portfolio</router-link>
+      <router-link :class="{ active: isActive('/about') }" class="link" to="/about">About me</router-link>
       <div>
         <i @click="mailTo" class="icon-email-outline" alt="write me"></i>
       </div>
@@ -28,6 +28,7 @@ import router from "../router/index.js"
 export default {
    data(){
     return {
+      currentRoute: router.currentRoute,
       scrollPosition: null,
       mobile: null,
       mobileNav: null,
@@ -40,6 +41,10 @@ export default {
     window.addEventListener('click', this.close);
   },
   methods: {
+    isActive(route){
+      const bool = route == this.currentRoute.path;
+      return bool;
+    },
     mailTo() {
       window.open("mailto:cameaann@gmail.com?subject=subject&body=body");
     },

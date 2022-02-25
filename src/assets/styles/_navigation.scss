@@ -60,9 +60,11 @@
     &:hover{
         color: $font-color-dark;
     }
-    // &-img{
-    //  }
 }
+.active{
+    color: $font-color-dark;
+}
+
 .logo{
     cursor: pointer;
     width: 16rem;
@@ -75,6 +77,12 @@
 .icon{
     font-size: 3rem;
     align-self: center;
+}
+
+.icon-email-outline{
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .letter{
